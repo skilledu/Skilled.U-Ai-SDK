@@ -92,6 +92,6 @@ curl --location "https://api.skilledu.in/api/ai_gateway.php" \
   }'
 ```
 
-**Note**: Replace the URL only if you host the gateway elsewhere. Each SDK is simply a wrapper around these API calls, so you can use either the SDKs or direct API calls.  
+**Note**: Each SDK is simply a wrapper around these API calls, so you can use either the SDKs or direct API calls.  
 
 ✨ With **Skilled AI SDK**, you can integrate AI into your projects quickly and easily — no API keys required!  
