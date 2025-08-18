@@ -34,6 +34,7 @@ echo $client->chat([
   'messages' => [
     ['role' => 'system', 'content' => 'You are concise.'],
     ['role' => 'user',   'content' => 'Explain LLMs briefly.'],
+    ['role' => 'assistant',   'content' => 'Previously summarized the topic.'],
   ],
 ]);
 
@@ -58,6 +59,7 @@ Returns available models for the active platform.
 - `message`?: string
 - `system`?: string
 - `user`?: string
+- `assistant`?: string
 - `messages`?: array<int, array{role: string, content: string}>
 - `model`?: string
 - `temperature`?: float (default 0.7)
