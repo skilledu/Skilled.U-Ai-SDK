@@ -26,6 +26,7 @@ const client = new SkilledUAIClient('https://api.skilledu.in/api/ai_gateway.php'
     messages: [
       { role: 'system', content: 'You are concise.' },
       { role: 'user', content: 'Explain LLMs briefly.' },
+      { role: 'assistant', content: 'Previously summarized the topic.' },
     ],
   }));
 
