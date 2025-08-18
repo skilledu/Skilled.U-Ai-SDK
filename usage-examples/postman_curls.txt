@@ -1,0 +1,63 @@
+GET API info
+curl --location "https://api.skilledu.in/api/ai_gateway.php" \
+  --header "Accept: application/json"
+
+GET available models (active platform)
+curl --location "https://api.skilledu.in/api/ai_gateway.php?action=models" \
+  --header "Accept: application/json"
+
+POST minimal (only required field)
+curl --location "https://api.skilledu.in/api/ai_gateway.php" \
+  --request POST \
+  --header "Content-Type: application/json" \
+  --header "Accept: application/json" \
+  --data '{
+    "message": "Hello!"
+  }'
+
+POST with options (explicit model, temperature, max_tokens)
+curl --location "https://api.skilledu.in/api/ai_gateway.php" \
+  --request POST \
+  --header "Content-Type: application/json" \
+  --header "Accept: application/json" \
+  --data '{
+    "message": "Write a 2-line poem about oceans.",
+    "model": "llama-3.1-8b-instant",
+    "temperature": 0.6,
+    "max_tokens": 200
+  }'
+
+POST with system/user/assistant
+curl --location "https://api.skilledu.in/api/ai_gateway.php" \
+  --request POST \
+  --header "Content-Type: application/json" \
+  --header "Accept: application/json" \
+  --data '{
+    "system": "You are a concise assistant.",
+    "user": "Explain LLMs briefly.",
+    "assistant": "Previously, I explained LLMs succinctly."
+  }'
+
+POST with messages array
+curl --location "https://api.skilledu.in/api/ai_gateway.php" \
+  --request POST \
+  --header "Content-Type: application/json" \
+  --header "Accept: application/json" \
+  --data '{
+    "messages": [
+      {"role": "system", "content": "You are helpful and concise."},
+      {"role": "assistant", "content": "Previously summarized the topic."},
+      {"role": "user", "content": "Give 3 tips to learn faster."}
+    ]
+  }'
+
+POST longer prompt
+curl --location "https://api.skilledu.in/api/ai_gateway.php" \
+  --request POST \
+  --header "Content-Type: application/json" \
+  --header "Accept: application/json" \
+  --data '{
+    "message": "Summarize the key pros and cons of static typing vs dynamic typing in 5 bullet points."
+  }'
+
+Note: Replace the URL above only if you host the gateway elsewhere.
