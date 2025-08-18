@@ -1,6 +1,6 @@
-# Skilled AI SDK — Master Guide  
+# Skilled.U AI SDK — Master Guide  
 
-Welcome to the **Skilled AI SDK** repository 🚀 This repo provides **language-specific SDKs** (Browser, Node.js, PHP, Python) to access Skilled AI APIs **without any API key**.  
+Welcome to the **Skilled.U AI SDK** repository 🚀 This repo provides **language-specific SDKs** (Browser, Node.js, PHP, Python) to access Skilled AI APIs **without any API key**.  
 
 - [Browser SDK](./browser_sdk.md)  
 - [Node.js SDK](./node_sdk.md)  
