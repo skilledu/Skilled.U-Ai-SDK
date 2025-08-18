@@ -29,6 +29,7 @@ print(client.chat(system="You are helpful.", user="Who are you?"))
 print(client.chat(messages=[
     {"role": "system", "content": "You are concise."},
     {"role": "user", "content": "Explain LLMs briefly."},
+    {"role": "assistant", "content": "Previously summarized the topic."},
 ]))
 
 # Chat – with options
@@ -51,6 +52,7 @@ Returns the available models for the active platform.
 - message: Optional[str] = None
 - system: Optional[str] = None
 - user: Optional[str] = None
+- assistant: Optional[str] = None
 - messages: Optional[list[dict]] = None
 - model: Optional[str] = None
 - temperature: float = 0.7
