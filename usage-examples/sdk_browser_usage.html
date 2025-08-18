@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skilled.U Browser SDK Usage</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; max-width: 900px; margin: 20px auto; }
+    textarea, input, select { width: 100%; padding: 10px; margin: 6px 0; }
+    button { padding: 10px 14px; }
+    pre { background: #f6f8fa; padding: 10px; border-radius: 6px; }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  </style>
+</head>
+<body>
+  <h1>Skilled.U Browser SDK</h1>
+  <p>Simple example using <code>sdk_browser.js</code>.</p>
+
+  <label>Base URL (full path to ai_gateway.php)</label>
+  <input id="baseUrl" value="http://localhost:8000/ai_gateway.php" />
+
+  <div class="row">
+    <div>
+      <h3>List Models</h3>
+      <button id="btnModels">List Models</button>
+      <pre id="modelsOut"></pre>
+    </div>
+    <div>
+      <h3>Chat (Single Message)</h3>
+      <textarea id="msg" placeholder="Type your message...">Hello from Browser SDK!</textarea>
+      <button id="btnChat">Send</button>
+      <pre id="chatOut"></pre>
+    </div>
+  </div>
+
+  <h3>Chat (System + User)</h3>
+  <input id="sys" placeholder="System instruction (optional)" value="You are helpful and concise." />
+  <textarea id="usr" placeholder="User message">Explain LLMs briefly.</textarea>
+  <button id="btnSU">Send (system+user)</button>
+  <pre id="suOut"></pre>
+
+  <h3>Chat (Assistant only)</h3>
+  <input id="asst" placeholder="Assistant prior message" value="Previously, I summarized the topic." />
+  <button id="btnAsst">Send (assistant)</button>
+  <pre id="asstOut"></pre>
+
+  <script src="./sdk_browser.js"></script>
+  <script>
+    const el = (id) => document.getElementById(id);
+
+    function client() {
+      const base = el('baseUrl').value.trim();
+      return new window.SkilledUAIClient(base);
+    }
+
+    el('btnModels').addEventListener('click', async () => {
+      try {
+        const models = await client().listModels();
+        el('modelsOut').textContent = JSON.stringify(models, null, 2);
+      } catch (e) {
+        el('modelsOut').textContent = 'Error: ' + e.message;
+      }
+    });
+
+    el('btnChat').addEventListener('click', async () => {
+      try {
+        const reply = await client().chat({ message: el('msg').value });
+        el('chatOut').textContent = reply;
+      } catch (e) {
+        el('chatOut').textContent = 'Error: ' + e.message;
+      }
+    });
+
+    el('btnSU').addEventListener('click', async () => {
+      try {
+        const reply = await client().chat({ system: el('sys').value, user: el('usr').value });
+        el('suOut').textContent = reply;
+      } catch (e) {
+        el('suOut').textContent = 'Error: ' + e.message;
+      }
+    });
+
+    el('btnAsst').addEventListener('click', async () => {
+      try {
+        const reply = await client().chat({ assistant: el('asst').value });
+        el('asstOut').textContent = reply;
+      } catch (e) {
+        el('asstOut').textContent = 'Error: ' + e.message;
+      }
+    });
+  </script>
+</body>
+</html>
