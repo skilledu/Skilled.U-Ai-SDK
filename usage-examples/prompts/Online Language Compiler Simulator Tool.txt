@@ -1,0 +1,47 @@
+Act as an expert web developer. Create a complete Online Language Compiler Simulator Tool in a single HTML file that:
+
+1. Has a modern, responsive UI with HTML/CSS/JS
+2. Includes:
+   - Language selection dropdown (Python, JavaScript, Java, C++, HTML/CSS)
+   - Code editor textarea for writing code
+   - Run button to execute code
+   - Output terminal/display area below
+   - Clear button to reset everything
+   - Loading spinner during execution
+
+3. Core Functionality:
+   - When user clicks Run button, send code to https://api.skilledu.in/api/ai_gateway.php via POST
+   - Request body format: {"message": "Act as a code interpreter. Execute this [LANGUAGE] code and provide only the output: [USER_CODE]. Do not include any explanations, just the exact output."}
+   - Display returned output in terminal area
+   - Simulate real compiler behavior (syntax errors, runtime errors, successful output)
+   - Handle different languages appropriately
+
+4. Technical Requirements:
+   - Use Monaco Editor or CodeMirror-like styling for code area
+   - Terminal should look like real command prompt/IDE terminal
+   - Support syntax highlighting for selected language
+   - Proper error handling and user feedback
+   - Responsive design for all devices
+   - No external libraries except CDN for icons
+
+5. UI Features:
+   - Dark theme with professional coding environment look
+   - Line numbers in code editor
+   - Terminal with scrollable output
+   - Realistic loading states
+   - Copy output button
+   - Clear and intuitive layout
+
+6. Example Simulations:
+   - Python: Print statements, basic calculations, errors
+   - JavaScript: Console logs, functions, errors
+   - HTML/CSS: Render preview (optional)
+   - Java/C++: Basic syntax simulation
+
+7. Output Format:
+   - Return ONLY the complete HTML code
+   - Single file solution
+   - Fully functional when saved as .html
+   - No additional explanations
+
+Create the complete Online Language Compiler Simulator Tool now:
