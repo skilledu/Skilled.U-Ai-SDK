@@ -1,0 +1,16 @@
+Act as an expert web developer. Create a complete Social Media Content Generator Tool in a single HTML file that:
+
+1. Has a modern, responsive UI with HTML/CSS/JS
+2. Takes user input for content topic/idea in a textarea
+3. Sends request to https://api.skilledu.in/api/ai_gateway.php via POST
+4. Request body should use this message format: {"message": "Act as a professional social media content creator. Create engaging Instagram post content for: [USER_INPUT]. Include: 1) Catchy caption with relevant hashtags 2) Suggested image/video description 3) Call-to-action 4) 5-7 relevant hashtags 5) Post tone: friendly and engaging"}
+5. Displays the generated social media content in a scrollable result area
+6. Includes a copy button to copy the entire content
+7. Shows loading spinner during API request
+8. Handles errors gracefully with user feedback
+9. Has a clean, modern design with:
+   - Professional color scheme
+   - Responsive layout for mobile/desktop
+   - Attractive buttons and typography
+   - Smooth animations and transitions
+10. Return only the complete HTML code as a single file, nothing else
