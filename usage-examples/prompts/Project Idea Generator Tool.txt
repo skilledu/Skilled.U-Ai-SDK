@@ -1,0 +1,136 @@
+Act as an expert web developer. Create a complete Project Idea Generator Tool in a single HTML file that:
+
+1. Has a modern, futuristic UI with HTML/CSS/JS
+2. Includes:
+   - Project type selection: Technical, Non-Technical
+   - Education level selection: Diploma/Polytechnic, B.Tech, M.Tech/Advanced
+   - Domain/Field selection dropdown with options:
+     
+     Technical Domains:
+     * Computer Science & IT
+     * Electronics & Communication
+     * Mechanical Engineering
+     * Civil Engineering
+     * Electrical Engineering
+     * Biotechnology
+     * Data Science & AI
+     * Cybersecurity
+     * Robotics
+     * Renewable Energy
+     * Healthcare Technology
+     * IoT & Embedded Systems
+     * Mobile/Web Development
+     * Machine Learning
+     * Blockchain
+     
+     Non-Technical Domains:
+     * Marketing & Sales
+     * Human Resources
+     * Finance & Accounting
+     * Business Management
+     * Psychology & Counseling
+     * Education & Training
+     * Healthcare & Medicine
+     * Law & Legal Services
+     * Media & Journalism
+     * Event Management
+     * Tourism & Hospitality
+     * Agriculture & Farming
+     * Social Work
+     * Public Administration
+     * Creative Arts & Design
+   - Difficulty level: Easy, Medium, Advanced
+   - Generate button
+   - Loading spinner during processing
+   - Project ideas display area with scrollable output
+   - Copy button for individual ideas
+   - Clear button to reset selections
+
+3. Core Functionality:
+   - When user selects project type, education level, domain, and difficulty, send to https://api.skilledu.in/api/ai_gateway.php via POST
+   - Request body format: {"message": "Act as an expert academic project advisor. Generate 3 innovative project ideas suitable for [EDUCATION_LEVEL] students in [PROJECT_TYPE] [DOMAIN] field at [DIFFICULTY_LEVEL] level. For each project include: 1) Project Title 2) Objective 3) Key Features 4) Resources/Requirements 5) Implementation Steps 6) Real-world Application 7) Expected Outcome. Make projects practical, modern, and relevant."}
+   - Display returned project ideas in well-formatted output area
+   - Each project should be clearly separated and numbered
+   - Include proper headings and bullet points for readability
+
+4. Technical Requirements:
+   - Futuristic, modern design with glassmorphism effects
+   - Responsive layout for all devices
+   - Smooth animations and transitions
+   - Proper error handling with user feedback
+   - Copy individual project button
+   - DO NOT use sessionStorage, localStorage, or cookies - AVOID ALL CLIENT-SIDE STORAGE
+   - Professional color scheme with domain-based accents
+
+5. UI Features:
+   - Modern card-based layout for selections
+   - Animated generate button with hover effects
+   - Professional dashboard look with futuristic elements
+   - Clear visual hierarchy in project display
+   - Collapsible project sections for better UX
+   - Loading states with professional feedback
+   - Well-organized project information formatting
+
+6. Education Level Specific Requirements:
+   - Diploma/Polytechnic: Simple, hands-on projects with basic resources
+   - B.Tech: Intermediate complexity with modern tools and methods
+   - M.Tech/Advanced: Advanced research-oriented projects with cutting-edge approaches
+
+7. Project Type Specific Focus:
+   
+   Technical Projects:
+   - Coding, hardware, software development
+   - Engineering solutions, algorithms
+   - Modern technologies and frameworks
+   - Lab-based or computer-based implementation
+   
+   Non-Technical Projects:
+   - Research studies, case analyses
+   - Business plans, marketing strategies
+   - Social impact projects, surveys
+   - Creative works, presentations, reports
+
+8. Domain-Specific Focus:
+   
+   Technical Domains:
+   * Computer Science: Web/Mobile apps, AI/ML projects, cybersecurity tools
+   * Electronics: IoT devices, embedded systems, communication systems
+   * Mechanical: CAD designs, automation projects, robotics
+   * Civil: Structural analysis, sustainable construction projects
+   * Electrical: Power systems, renewable energy projects
+   * Biotechnology: Healthcare applications, bioinformatics projects
+   * Data Science: Analytics dashboards, prediction models
+   * Cybersecurity: Security tools, penetration testing projects
+   * Robotics: Automation bots, AI-controlled systems
+   * Renewable Energy: Solar/wind projects, energy management systems
+   * Healthcare Tech: Medical apps, health monitoring systems
+   * IoT: Smart home devices, sensor networks
+   * Mobile/Web: Modern app development projects
+   * Machine Learning: Prediction models, computer vision projects
+   * Blockchain: Decentralized applications, smart contracts
+   
+   Non-Technical Domains:
+   * Marketing: Campaign strategies, market research, branding projects
+   * HR: Employee engagement studies, recruitment processes
+   * Finance: Budget planning, investment analysis, financial modeling
+   * Business: Startup plans, feasibility studies, SWOT analysis
+   * Psychology: Case studies, counseling approaches, behavior analysis
+   * Education: Teaching methods, curriculum development, learning tools
+   * Healthcare: Patient care studies, health awareness campaigns
+   * Law: Legal case analysis, compliance frameworks
+   * Media: Content creation, journalism projects, media campaigns
+   * Event Management: Event planning, coordination strategies
+   * Tourism: Travel itineraries, hospitality management
+   * Agriculture: Farming techniques, sustainable practices
+   * Social Work: Community development projects, awareness campaigns
+   * Public Admin: Policy analysis, governance studies
+   * Creative Arts: Design portfolios, artistic projects, exhibitions
+
+9. Output Format:
+   - Return ONLY the complete HTML code
+   - Single file solution
+   - Fully functional when saved as .html
+   - No additional explanations
+   - MUST NOT use any client-side storage (sessionStorage, localStorage, cookies)
+
+Create the complete Technical and Non-Technical Project Idea Generator Tool now:
