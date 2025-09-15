@@ -1,0 +1,45 @@
+Act as an expert web developer and AI engineer. Your task is to create a complete, functional Prompt Generator Tool using HTML, CSS, and JavaScript that integrates with an AI API.
+
+Requirements:
+1. Create a single HTML file with embedded CSS and JavaScript
+2. Design a modern, responsive user interface with:
+   - Clean, professional layout
+   - Input textarea for user ideas
+   - Generate button
+   - Loading spinner/animation
+   - Scrollable result display area
+   - Copy to clipboard button
+   - Error handling and user feedback
+
+3. API Integration:
+   - Endpoint: https://api.skilledu.in/api/ai_gateway.php
+   - Method: POST
+   - Headers: Content-Type: application/json, Accept: application/json
+   - Request Body Format: {"message": "YOUR_GENERATED_PROMPT"}
+   - Use this prompt generation logic: "Act as an expert prompt engineer. Convert this user idea into a structured AI prompt: [USER_INPUT]"
+
+4. Core Functionality:
+   - User enters idea in textarea
+   - On clicking Generate, send request to API
+   - Display loading state
+   - Show generated prompt in result area
+   - Make result area scrollable for long content
+   - Copy button should copy prompt to clipboard
+   - Handle errors gracefully
+   - Responsive design for all devices
+
+5. Technical Requirements:
+   - No external libraries except Font Awesome CDN
+   - Modern CSS (Flexbox/Grid, Variables, Gradients)
+   - Async/await for API calls
+   - Proper error handling
+   - Clipboard API with fallback
+   - Clean, readable code structure
+
+6. Output Format:
+   - Return ONLY the complete HTML code
+   - Single file solution
+   - No external dependencies except CDN links
+   - Fully functional when saved as .html
+
+Create the complete Prompt Generator Tool now:
