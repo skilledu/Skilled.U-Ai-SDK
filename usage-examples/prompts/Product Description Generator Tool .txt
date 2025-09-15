@@ -1,0 +1,12 @@
+Act as an expert web developer. Create a complete Product Description Generator Tool in a single HTML file that:
+
+1. Has a clean, responsive UI with HTML/CSS/JS
+2. Takes user input for product details in a textarea
+3. Sends request to https://api.skilledu.in/api/ai_gateway.php via POST
+4. Request body: {"message": "Act as a professional copywriter. Create a compelling product description for: [USER_INPUT]. Include: 1) Attention-grabbing headline 2) Key features and benefits 3) Problem-solving statement 4) Unique selling points 5) Call-to-action 6) 3-5 relevant keywords"}
+5. Displays generated description in scrollable result area
+6. Includes copy button and loading states
+7. Clean, e-commerce friendly design
+8. Return only complete HTML code, nothing else
+
+Create the Product Description Generator Tool now:
